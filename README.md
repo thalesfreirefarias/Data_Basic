@@ -2,10 +2,55 @@
 Basic Study to Data science Students.
 
 
-Curso de Python.
-Google Colab:
--> Print'',numero)
--> Variaveis
+![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+
+---
+
+### Introduction to Basic Concepts for Data Science 
+Fundamental concepts essential for anyone who wants to work with data analysis.
+
+---
+
+
+🔹 Data Types
+---
+int, float, str, bool
+Conversão de tipos com int(), float(), str()
+
+```
+idade = 25
+altura = 1.75
+nome = "Thales"
+print(f"{nome} tem {idade} anos e {altura}m de altura.")
+```
+🔹 Operators
+---
+
+Aritméticos: +, -, *, /, **, %
+Comparação: ==, !=, >, <, >=, <=
+Lógicos: and, or, not
+
+---
+🔹Creating Functions
+---
+```
+def media(lista):
+    calculo = sum(lista) / len(lista)
+    print(calculo)
+
+
+notas = [7.5, 8.0, 9.0]
+resultado = media(notas)
+print(f"A média é {resultado:.2f}")
+
+```
+🔹 Text
+---
+```
 texto = texto.strip().replace('y','t').upper()
 texto
 
@@ -23,7 +68,38 @@ nota_1 = float(input('Digite a 1° nota: '))
 nota_2 = float(input('Digite a 2° nota: '))
 
 print(f'Média: {(nota_1+nota_2)/2}')
+```
+🔹 Data Visualization with Matplotlib
+---
+```
+import matplotlib.pyplot as plt
 
+estudantes = ["João", "Maria", "José"]
+notas = [8.5, 9, 6.5]
+
+plt.bar(x=estudantes, height=notas)
+plt.title("Notas dos Estudantes")
+plt.xlabel("Estudantes")
+plt.ylabel("Notas")
+plt.show()
+```
+
+🔹 List
+---
+```
+from random import randrange, sample
+
+lista = []
+for i in range(20):
+    lista.append(randrange(100))
+
+amostra = sample(lista, 5)
+print("Amostra aleatória:", amostra)
+```
+
+🔹 While
+---
+```
 contador = 1
 
 while contador <= 3:
@@ -40,47 +116,7 @@ while contador <= 3:
     print('-' * 40)
 
     contador += 1
-
-
-# Desafio-7-dias-de-codigo-alura
-7 days of Python code with Alura
-
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
-
-Google Colab of this project : https://colab.research.google.com/drive/1XFi3LRofZfBaavlG3U9W3X4R3xDtMdWK#scrollTo=10y5RhmilE3X
-
-### Day 1: import data
-
 ```
-Join differents datasets
-
-emprestimos_biblioteca = pd.concat([dados_2010_1,dados_2010_2,dados_2011_1,dados_2011_2,dados_2012_1,dados_2012_2,dados_2013_1,dados_2013_2,dados_2014_1,
-                                    dados_2014_2,dados_2015_1,dados_2015_2,dados_2016_1,dados_2016_2,dados_2017_1,dados_2017_2,dados_2018_1,dados_2018_2,
-                                    dados_2019_1,dados_2019_2,dados_2020_1],ignore_index=True)
-emprestimos_biblioteca
-   
-```
-
-```
-Drop duplicates
-emprestimos_biblioteca.value_counts()
-```
-
-```
-Join one more data frame
-
-dados_exemplares = pd.read_parquet('https://github.com/FranciscoFoz/7_Days_of_Code_Alura-Python-Pandas/raw/main/Dia_1-Importando_dados/Datasets/dados_exemplares.parquet')
-dados_exemplares
-
-emprestimos_completo = emprestimos_biblioteca.merge(dados_exemplares)
-emprestimos_completo
-```
-
-
 
 
 ### Adjustments and improvements.
