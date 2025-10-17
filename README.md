@@ -86,6 +86,8 @@ plt.show()
 
 🔹 List
 ---
+A list is an ordered collection of elements. These elements can be of any type — numbers, strings, other lists, etc.
+A tuple is also an ordered collection, but immutable — once created, you cannot change its elements.
 ```
 from random import randrange, sample
 
@@ -117,7 +119,37 @@ while contador <= 3:
 
     contador += 1
 ```
+🔹 Exception
+---
+try: Where you put code that might cause an error.
+except: Where you handle specific errors.
+else: Runs only if no error occurs.
+finally: Always runs, no matter what.
+Custom exception: InvalidAgeError is created to handle specific invalid input.
+```
+# Custom exception
+class InvalidAgeError(Exception):
+    """Exception raised when the age is negative or unrealistically high."""
+    pass
 
+def check_age(age):
+    if age < 0 or age > 120:
+        raise InvalidAgeError("Invalid age! Age must be between 0 and 120.")
+    return f"Valid age: {age} years old."
+
+# Main program
+try:
+    age = int(input("Enter your age: "))  # Might raise ValueError if input is not a number
+    result = check_age(age)               # Might raise InvalidAgeError
+except ValueError:
+    print("Error: You must enter an integer number.")
+except InvalidAgeError as e:
+    print(f"Custom error: {e}")
+else:
+    print(result)
+finally:
+    print("Program execution finished. Thank you for using it!")
+```
 
 ### Adjustments and improvements.
 
