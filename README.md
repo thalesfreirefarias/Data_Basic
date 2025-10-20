@@ -150,7 +150,13 @@ else:
 finally:
     print("Program execution finished. Thank you for using it!")
 ```
+🔹frequency distributio
+---
 
+A frequency distribution is a way to organize data that shows how often each value (or range of values) occurs in a dataset.
+```
+```
+---
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
