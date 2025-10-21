@@ -155,6 +155,12 @@ finally:
 
 A frequency distribution is a way to organize data that shows how often each value (or range of values) occurs in a dataset.
 ```
+ frequencia = dados['Profissão'].value_counts()
+ percentual = dados['Profissão'].value_counts(normalize = True) * 100
+dist_freq_qualitativas = pd.DataFrame({'Frequência': frequencia, 'Porcentagem (%)': percentual})
+dist_freq_qualitativas.rename(index = {1: 'Estatístico', 2: 'Cientista de Dados', 3: 'Programador Python'}, inplace = True)
+dist_freq_qualitativas.rename_axis('Profissão', axis= 'columns', inplace = True)
+dist_freq_qualitativas
 ```
 ---
 ### Adjustments and improvements.
