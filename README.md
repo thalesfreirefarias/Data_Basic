@@ -150,7 +150,7 @@ else:
 finally:
     print("Program execution finished. Thank you for using it!")
 ```
-🔹frequency distributio
+🔹frequency distribution
 ---
 
 A frequency distribution is a way to organize data that shows how often each value (or range of values) occurs in a dataset.
@@ -161,6 +161,21 @@ dist_freq_qualitativas = pd.DataFrame({'Frequência': frequencia, 'Porcentagem (
 dist_freq_qualitativas.rename(index = {1: 'Estatístico', 2: 'Cientista de Dados', 3: 'Programador Python'}, inplace = True)
 dist_freq_qualitativas.rename_axis('Profissão', axis= 'columns', inplace = True)
 dist_freq_qualitativas
+```
+
+🔹Create Histogram
+---
+
+A histogram is a graphical representation that organizes a group of data points into user-defined ranges (called bins). It looks like a bar chart, but instead of showing categories, it shows how many data points fall into each range of values.
+```
+import seaborn as sns
+
+ax = sns.distplot(dados.Altura)
+
+ax.figure.set_size_inches(12, 6)
+ax.set_title('Distribuição de Frequências - Altura - KDE', fontsize=18)
+ax.set_xlabel('Metros', fontsize=14)
+ax
 ```
 ---
 ### Adjustments and improvements.
